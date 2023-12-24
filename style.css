@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@500&display=swap');
+
+:root{
+    --red:#ff1a1a;
+}
+
+*{
+    font-family: 'Harmattan', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    transition: all .3s cubic-bezier(.16,.8,.62,1.52);
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+*::selection{
+    background:var(--red);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#000;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--red);
+}
+
+section{
+    min-height: 100vh;
+    padding:0 7%;
+    padding-top: 11rem;
+}
+
+.btn{
+    display: inline-block;
+    padding:.7rem 4rem;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--red);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    transform:scale(1.02);
+}
+
+.heading{
+    text-align: center;
+    color:var(--red);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:#666;
+}
+
+header{
+    position: fixed;
+    top:2.5rem; left:50%;
+    transform:translateX(-50%);
+    width:93%;
+    z-index: 1000;
+    background:#fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 3rem;
+    border-radius: .5rem;
+}
+
+header .logo{
+    color:#333;
+    font-size: 2.5rem;
+}
+
+header .logo span{
+    color:var(--red);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin-left: 3rem;
+}
+
+header .navbar ul li a{
+   font-size: 2rem;
+   color:#333;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:var(--red);
+}
+
+#menu{
+    font-size: 3rem;
+    color:#666;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Add this CSS to position the hanger image */
+#home .content {
+    position: relative;
+}
+
+#home .content .hanger-image {
+    float: right;
+    top: 0;
+    right: 0;
+    max-width: 400px; /* Adjust the max-width to your desired size */
+    height: auto;
+}
+
+.home .content{
+    flex:1 1 40rem;
+    padding:4rem 0;
+}
+
+.home .content h3{
+    color:var(--red);
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+.home .content h1{
+    color:#fff;
+    font-size: 7rem;
+}
+
+.home .content p{
+    color:#aaa;
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.gallery{
+    background:#f0f0f0;
+}
+
+.gallery .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .box-container .box {
+    flex: 1 1 30rem;
+    height: 40rem;
+    overflow: hidden;
+    background: #333;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.gallery .box-container .box img {
+    width: 100%; /* Set the width to 100% to make the image fill the container */
+    height: 100%;
+    object-fit: cover; /* Crop the image to cover the entire box */
+}
+
+
+.gallery .box-container .box .info{
+    position: absolute;
+    bottom:-120%; left:50%;
+    transform: translateX(-50%);
+    width:80%;
+    background:#fff;
+    padding:2rem;
+    border:.3rem solid var(--red);
+    border-radius: .5rem;
+}
+
+.gallery .box-container .box:hover .info{
+    bottom:2rem;
+}
+
+.gallery .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+.gallery .box-container .box:hover{
+    background:#111;
+}
+
+.gallery .box-container .box .info h3{
+    background:var(--red);
+    color:#fff;
+    border-radius: .5rem;
+    margin:0 5rem;
+    margin-top: -3.7rem;
+    padding:.5rem 2rem;
+    font-size: 2.5rem;
+}
+
+.gallery .box-container .box .info p{
+    font-size: 2rem;
+    color:#666;
+    padding:.5rem;
+    padding-top: 2rem;
+}
+
+.about{
+    background:#eee;
+    padding-bottom: 3rem;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:1 1 40rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.about .row .image img{
+    height:50rem;
+}
+
+.about .row .content{
+    flex:1 1 40rem;;
+}
+
+.about .row .content h3{
+    font-size: 5.5rem;
+    color:#333;
+}
+
+.about .row .content p{
+    font-size: 2.2rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+
+
+.product{
+    background:#eee;
+}
+
+.product .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product .box-container .box{
+    margin:1rem;
+    padding:2rem;
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.1);
+    text-align: center;
+    width:27rem;
+}
+
+.product .box-container .box:hover{
+    box-shadow: 0 .7rem 1rem rgba(0,0,0,.1);
+}
+
+.product .box-container .box img{
+    margin:2rem 0;
+    height:17rem;
+}
+
+.product .box-container .box h3{
+    color:#444;
+    font-size: 3rem;
+}
+
+.product .box-container .box p{
+    color:#999;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.product .box-container .box .price{
+    color:#666;
+    font-size: 3rem;
+}
+
+.footer{
+    text-align: center;
+    background:#222;
+}
+
+.footer .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.footer .share a{
+    font-size: 2rem;
+    color:#ccc;
+    padding:2rem;
+}
+
+.footer .share a:hover{
+    color:#eee;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    padding:2rem 1rem;
+    font-size: 3rem;
+    color:#fff;
+    background:#111;
+}
+
+.footer .credit a{
+    color:var(--red);
+}
+
+.scroll-top{
+    position: fixed;
+    bottom:7.5rem; right:2rem;
+    z-index: 1000;
+    display: none;
+}
+
+.scroll-top img{
+    height:7rem;
+    filter:drop-shadow(0 .3rem .5rem rgba(0,0,0,.2));
+}
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:110%; left:0;
+        background:#fff;
+        width: 100%;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transform:scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem;
+    }
+
+    header .navbar ul li{
+        margin:1rem 0;
+        width:100%;
+    }
+
+    header .navbar ul li a{
+        display: block;
+        font-size: 2.5rem;
+        border-bottom: .1rem solid rgba(0,0,0,.1);
+        padding:1.5rem 0;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        transform:scaleY(1);
+        opacity: 1;
+    }
+
+    .home .content{
+        text-align: center;
+    }
+
+}
+
+@media (max-width:400px){
+
+    html{
+        font-size: 50%;
+    }
+
+    section{
+        padding:0 3%;
+        padding-top: 11rem;
+    }
+
+    .about .row .image img{
+        height: auto;
+        width:100%;
+    }
+
+    .product .box-container .box{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container {
+    text-align: center;
+}
+
+.form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c; /* Red color for the submit button */
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+@media (max-width: 400px) {
+    .form {
+        width: 100%;
+    }
+}
